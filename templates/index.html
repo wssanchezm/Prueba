@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Ejemplo de un Dashboard</title>
+</head>
+<body>
+
+    <center>
+        <h1>Analisis de las publicaciones de la revista Dyna-Colombia</h1>
+    </center>
+    
+
+    <p>Esta es una demostaacion de la creacion de un Dashboard estatico en GitHub Pages</p>
+
+    <h2>Cantidad de articulos publicados por ano</h2>
+  
+    <center>
+        <img src="numbyyear.png">
+    </center>
+    
+    
+
+    <h2>Articulos mas citados</h2>
+
+    <ul>
+        {% for i in articles %}
+        <li> {{ i }} </li>
+        {% endfor %}
+    </ul>
+
+
+
+</body>
+</html>
