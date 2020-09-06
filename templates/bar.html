@@ -5,41 +5,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Products Page - Dashboard Template</title>
+    <title>Dashboard Admin Template by Tooplate.com</title>
+    <!--
+
+    Template 2108 Dashboard
+
+	http://www.tooplate.com/view/2108-dashboard
+
+    -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600">
     <!-- https://fonts.google.com/specimen/Open+Sans -->
     <link rel="stylesheet" href="css/fontawesome.min.css">
     <!-- https://fontawesome.com/ -->
+    <link rel="stylesheet" href="css/fullcalendar.min.css">
+    <!-- https://fullcalendar.io/ -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- https://getbootstrap.com/ -->
     <link rel="stylesheet" href="css/tooplate.css">
-<div class="container">
-	<div class="row">
-		<div class="col-12">
-			<nav class="navbar navbar-expand-xl navbar-light bg-light">
-				<a class="navbar-brand">
-					<h1 class="tm-site-title mb-0"> Pronóstico de la evolución del SARS-CoV-2 en Colombia</h1>
-				</a>
-			</nav>
-		</div>
-	</div>
-</div>
+
 </head>
 
-<body id="reportsPage" class="bg02">
+<body id="reportsPage">
     <div class="" id="home">
         <div class="container">
+			<div class="row">
+				<div class="col-12">
+				<!-- 	<a <div class="col-xl-8 col-lg-12 tm-md-12 tm-sm-12 tm-col"> -->
+							<div class="bg-light tm-block h-100 p-1 mt-1">
+								<h1 class="m-block-title text-center"> <strong>Pronóstico de la evolución del SARS-CoV-2 en Colombia </strong></h1>
+								</div>				
+				<!-- 	</a> </div> -->
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12">
+				<!-- 	<a <div class="col-xl-8 col-lg-12 tm-md-12 tm-sm-12 tm-col"> -->
+							<div class="bg-light tm-block h-100 p-3 mt-3">
+								<h3 class="tm-block-title"><strong>¿Qué es el SARS-CoV-2? </strong></h3>
+								<h6 class="text-justify"> Es un virus que pertenece a la familia de coronavirus y que ha sido catalogado por la Organización Mundial de la Salud como una emergencia en salud pública de importancia internacional (ESPII), dada su veloz propagación y su afectación en la letalidad de la población, este virus causa Infección Respiratoria Aguda (IRA) que puede llegar a ser leve, moderada o grave. Fue notificado por primera vez el 31 de diciembre de 2019 en Wuhan-China y el 6 de marzo del 2020 se confirmó el primer caso en Colombia.</h6>
+								<p>&nbsp;</p>
+								<h3 class="tm-block-title"><strong>¿Qué encontrarás? </strong></h3>
+								<h6 class="text-justify"> En esta página podrás encontrar pronósticos referentes a nuevos casos, casos activos, recuperados y fallecidos de cinco ciudades principales en Colombia: Bogotá, Barranquilla, Cartagena, Cali y Medellín, con base en la información publicada por el gobierno nacional.</h6>
+							</div>				
+				<!-- 	</a> </div> -->
+				</div>
+			</div>	
             <div class="row">
                 <div class="col-12">
-                    <nav class="navbar navbar-expand-xl navbar-light bg-light">
-                        <a class="navbar-brand" href="index.html">
-                            <h1 class="tm-site-title mb-0">Ciudad</h1>
+                    <nav class="navbar navbar-expand-xl navbar-light bg-light mt-4">
+                        <a class="navbar-brand" href="#">
+                            <h1 class="tm-site-title text-dark"><strong>CIUDAD</strong></h1>
                         </a>
                         <button class="navbar-toggler ml-auto mr-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
-
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav mx-auto">
                                 <li class="nav-item">
@@ -53,25 +73,143 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="cal.html">Cali</a>
                                 </li>		
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="bar.html">Barranqilla</a>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="bar.html">Barranquilla</a>
                                 </li>	
                                 <li class="nav-item">
                                     <a class="nav-link" href="car.html">Cartagena</a>
-                                </li>	
-                            </ul>
+                                </li>									
                         </div>
                     </nav>
                 </div>
-				<footer class="row tm-mt-small">
+            </div>
+            <!-- row -->
+            <div class="row tm-content-row tm-mt-big mt-2">
+                <div class="col-xl-8 col-lg-12 tm-md-12 tm-sm-12 tm-col">
+                    <div class="bg-light tm-block h-100">
+                        <h2 class="tm-block-title text-center"><strong>Casos confirmados de SARS-CoV-2 en Barranquilla</strong></h2>
+								 <!-- <p><img src="img/b2.png" alt="Profile Image" width="700" height="350"><p> -->
+								<img src="img/b1.png" alt="b1" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-12 tm-md-12 tm-sm-12 tm-col">
+                    <div class="bg-light tm-block h-100">
+                        <div class="row">
+                            <div class="col-16">
+                                <h2 class="tm-block-title text-center"><strong>Cifras confirmadas</strong></h2>
+                            </div>
+                        </div>
+                        <ol class="tm-list-group tm-list-group-alternate-color tm-list-group-pad-big">
+							 {% for item in cifras_bar %}
+							<li><a class="tm-list-group-item">
+							<strong>{{ item[1]}}: </strong>{{ item[0] }}</a></li>
+                            {% endfor %}
+                            
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <!-- row -->
+			<div class="row">
+				<div class="col-12">
+							<div class="bg-light tm-block h-100 p-1 m-0">
+							<p>&nbsp;</p>
+							<h2 class="tm-block-title text-center"><strong>Evolución de SARS-CoV-2 en Barranquilla</strong></h2>
+							<img src="img/b1.png" alt="b1" class="img-fluid">
+							<img src="img/b1.png" alt="b1" class="img-fluid">
+							<img src="img/b1.png" alt="b1" class="img-fluid">
+							<img src="img/b1.png" alt="b1" class="img-fluid">
+							</div>				
+				</div>
+			</div>	
+            <div class="row tm-content-row tm-mt-big mt-3">
+                <div class="col-xl-8 col-lg-12 tm-md-12 tm-sm-12 tm-col">
+                        <div class="bg-light tm-block h-100 p-3">
+								<h3 class="tm-block-title"><strong>Metodología</strong></h3>
+								<h6 class="text-justify"> Para el pronóstico de nuevos casos, es muy importante mencionar que se hizo con base en la fecha de inicio de síntomas para quienes los presentan y la fecha de notificación para las personas que son asintomáticas a la enfermedad, esta decisión se tomó ya que sería el momento más próximo de cuando realmente se tuvo el contagio.</h6>
+								<h6 class="text-justify"> Por otra parte, los pronósticos referentes a los fallecidos y a los recuperados se realizaron teniendo en cuenta la fecha de muerte y la fecha de recuperación respectivamente, vale mencionar en este punto que la información puede presentar rezagos por el tiempo de consolidación de los informes, lo que aumenta el nivel de incertidumbre respecto al comportamiento de esta enfermedad.</h6>
+								<h6 class="text-justify"> Para lograr la predicción se hizo una ponderación de modelos, de acuerdo al horizonte de tiempo de predicción, los modelos aplicados fueron:</h6>
+								<p>&nbsp;</p>
+								<h5 class="tm-block-body"><strong>Modelos ARIMA</strong></h5>
+								<h6 class="text-justify"> Los modelos autorregresivos explican la variable de un periodo t por las observaciones de la misma en periodos anteriores, añadiendo un término de error. Los modelos autorregresivos se abrevian con la palabra AR y en paréntesis el orden del modelo, que expresa el número de observaciones retrasadas de la serie temporal analizada, es decir, un modelo AR(p) tendría la siguiente expresión:</h6>
+								<img src="img/f1.jpg" alt="Modelo AR" class="img-fluid" style="display: block; margin-left: auto; margin-right: auto;">
+								<h6 class="text-justify"> Un modelo denominado de medias móviles, es aquel que explica el valor de la variable en un periodo t en función de un término independiente y una sucesión de errores correspondientes a periodos anteriores, ponderados convenientemente. Son denotados por la palabra MA, un modelo MA(q) se expresa como:</h6>
+								<img src="img/f2.jpg" alt="Modelo MA" class="img-fluid" style="display: block; margin-left: auto; margin-right: auto;">
+								<h6 class="text-justify"> Por lo tanto, los modelos ARIMA son modelos paramétricos que representan las series que no cumplen el supuesto de estacionariedad en covarianza, es decir, donde la media y la varianza no son constantes y por lo tanto requiere un orden de integración d, el modelo se denota como ARIMA(p, d, q), donde p es el orden del polinomio autorregresivo estacionario, d es el orden de integración de la serie, es decir, el número de diferencias que hay que tomar a la serie para que sea estacionaria y q es el orden del polinomio de medias móviles invertible, expresado como:</h6>
+								<img src="img/f3.jpg" alt="Modelo ARIMA" class="img-fluid" style="display: block; margin-left: auto; margin-right: auto;">
+								<p>&nbsp;</p>
+								<h5 class="tm-block-body"><strong>Modelos SIR</strong></h5>
+								<h6 class="text-justify"> Este modelo epidemiológico es capaz de capturar muchas características típicas de brotes de enfermedades y además incorporar intuitivamente medidas que se tomen respecto a la contención de la enfermedad. El nombre de este modelo proviene de las iniciales:</h6>
+								 <ul >
+									<li><a class="tm-list-group-item">
+										<strong> S (población susceptible): </strong class="text-justify">Corresponde al estado en el que un individuo puede ser contagiado por un infectado </a> </li>
+									<li><a class="tm-list-group-item">
+										<strong>I (población infectada): </strong class="text-justify">Corresponde al estado en que el individuo tiene la enfermedad y además puede infectar a los demás.</a></li>
+									<li><a class="tm-list-group-item">
+										<strong>R (población recuperada): </strong class="text-justify">Corresponde al estado en que el individuo adquiere inmunidad a la enfermedad y por ende no puede infectar. </a></li>                        
+								</ul>
+								<h6 class="text-justify"> Para computar este modelo es indispensable contar con una población susceptible inicial, en el caso particular del Covid-19  por ser un virus desconocido se considera que la población susceptible corresponde al 100% de la población total, sin embargo, se debe tener en cuenta que cada país tomó medidas preventivas para disminuir la propagación del virus, en el caso particular de Colombia, se decretó aislamiento preventivo a partir del 24 de marzo de 2020, lo que redujo la población susceptible a los individuos que hacían parte de las 43 excepciones, que de acuerdo a las estadísticas dadas por el gobierno, son aproximadamente 11,07 millones de personas lo que equivale al 22% de la población Total del País (50.3 millones de personas, según estimaciones del DANE). </h6> 
+								<h6 class="text-justify"> Por esta razón, se decide que la población susceptible de las cinco ciudades involucradas corresponde al 22% de la población total.</h6>
+								<h6 class="text-justify"> Otra definición importante de este modelo es el cálculo correspondiente a la tasa de contagio, tasa de recuperación y tasa de muerte, para este caso estas tasas fueron calculadas de la siguiente manera:</h6>
+								<img src="img/f4.jpg" alt="Tasas SIR1" class="img-fluid" style="display: block; margin-left: auto; margin-right: auto;">
+								<h6 class="text-justify"> y se define además que los pronósticos corresponden a:</h6>
+								<img src="img/f5.jpg" alt="Tasa SIR2" class="img-fluid" style="display: block; margin-left: auto; margin-right: auto;">
+						</div>
+                </div>
+                <div class="col-xl-4 col-lg-12 tm-md-12 tm-sm-12 tm-col">
+                    <div class="bg-light tm-block h-100">
+                        <div class="row">
+                            <div class="col-16">
+                                <h2 class="tm-block-title text-center"><strong>Pronóstico de nuevos casos (7 días) </strong></h2>
+                            </div>
+                        </div>
+                        <ol class="tm-list-group tm-list-group-alternate-color tm-list-group-pad-big">
+							 {% for item in nue_bar %}
+							<li><a class="tm-list-group-item">
+							{{ item }}</a></li>
+                            {% endfor %}
+                            
+                        </ol>
+							<p>&nbsp;</p>
+						<div class="row">
+                            <div class="col-16">
+                                <h2 class="tm-block-title text-center"><strong>Pronóstico de recuperados (7 días)</strong></h2>
+                            </div>
+                        </div>
+                        <ol class="tm-list-group tm-list-group-alternate-color tm-list-group-pad-big">
+							 {% for item in rec_bar %}
+							<li><a class="tm-list-group-item">
+							{{ item }}</a></li>
+                            {% endfor %}
+                            
+                        </ol>
+							<p>&nbsp;</p>
+						<div class="row">
+                            <div class="col-16">
+                                <h2 class="tm-block-title text-center"><strong>Pronóstico de fallecidos &nbsp;&nbsp;&nbsp;&nbsp; (7 días)</strong></h2>
+                            </div>
+                        </div>
+                        <ol class="tm-list-group tm-list-group-alternate-color tm-list-group-pad-big">
+							 {% for item in fal_bar %}
+							<li><a class="tm-list-group-item">
+							{{ item }}</a></li>
+                            {% endfor %}
+                        </ol>
+						<p>&nbsp;</p>
+						<h6 class="text-justify"><strong>MAPE histório confirmados: </strong> 123 </h6>
+						<h6 class="text-justify"><strong>MAPE histório recuperados: </strong> 123 </h6>
+						<h6 class="text-justify"><strong>MAPE histório fallecidos:  </strong> 123 </h6>
+                    </div>
+                </div>
+            </div>
+           <footer class="row tm-mt-small">
                 <div class="col-12 font-weight-light">
                     <p class="d-inline-block tm-bg-black text-white py-2 px-4">
-                        Fecha de actualización 2020/08/28. 
-                        <a rel="nofollow" href="https://www.datos.gov.co/" class="text-white tm-footer-link">Fuente: https://www.datos.gov.co/</a>
+                        Fecha de actualización {{ fua }}. 
+                        <a rel="nofollow" href="https://www.datos.gov.co/Salud-y-Protecci-n-Social/Casos-positivos-de-COVID-19-en-Colombia/gt2j-8ykr" class="text-white tm-footer-link">Fuente: https://www.datos.gov.co/</a>
                     </p>
                 </div>
             </footer>
-            </div>
+    </div>
 </body>
-
 </html>

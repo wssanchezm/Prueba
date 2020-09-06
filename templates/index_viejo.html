@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard Admin Template by Tooplate.com</title>
+    <!--
+
+    Template 2108 Dashboard
+
+	http://www.tooplate.com/view/2108-dashboard
+
+    -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600">
+    <!-- https://fonts.google.com/specimen/Open+Sans -->
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <!-- https://fontawesome.com/ -->
+    <link rel="stylesheet" href="css/fullcalendar.min.css">
+    <!-- https://fullcalendar.io/ -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- https://getbootstrap.com/ -->
+    <link rel="stylesheet" href="css/tooplate.css">
+
+</head>
+
+<body id="reportsPage">
+    <div class="" id="home">
+        <div class="container">
+			<div class="row">
+				<div class="col-12">
+					<a class="navbar navbar-expand-xl navbar-light bg-light">
+						<h1 class="tm-site-title d-inline-block"> Pronóstico de la evolución del SARS-CoV-2 en Colombia</h1>
+					</a>
+				</div>
+			</div>
+            <div class="row">
+                <div class="col-12">
+                    <nav class="navbar navbar-expand-xl navbar-light bg-light">
+                        <a class="navbar-brand" href="#">
+                            <h1 class="tm-site-title mb-0">CIUDAD</h1>
+                        </a>
+                        <button class="navbar-toggler ml-auto mr-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mx-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#">Bogotá
+                                        <span class="sr-only">(current)</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="med.html">Medellín</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="cal.html">Cali</a>
+                                </li>		
+                                <li class="nav-item">
+                                    <a class="nav-link" href="bar.html">Barranqilla</a>
+                                </li>	
+                                <li class="nav-item">
+                                    <a class="nav-link" href="car.html">Cartagena</a>
+                                </li>									
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <!-- row -->
+            <div class="row tm-content-row tm-mt-big">
+                <div class="col-xl-8 col-lg-12 tm-md-12 tm-sm-12 tm-col">
+                    <div class="bg-white tm-block h-100">
+                        <h2 class="tm-block-title">Series Principales</h2>
+								 <!-- <p><img src="img/b2.png" alt="Profile Image" width="700" height="350"><p> -->
+								<img src="img/b1.png" alt="b1" class="img-fluid">
+								<img src="img/b2.png" alt="b2" class="img-fluid">
+								<img src="img/b3.png" alt="b3" class="img-fluid">
+								<!-- <img src="img/b4.png" alt="b4" class="img-fluid"> -->
+								<!-- <img src="img/b5.png" alt="b5" class="img-fluid"> -->
+								 <!-- <p><img src="img/b1.png" alt="Profile Image" width="400" height="300"><p> -->
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-12 tm-md-12 tm-sm-12 tm-col">
+                    <div class="bg-white tm-block h-100">
+                        <div class="row">
+                            <div class="col-8">
+                                <h2 class="tm-block-title d-inline-block"> Cifras de interés </h2>
+                            </div>
+                        </div>
+                        <ol class="tm-list-group tm-list-group-alternate-color tm-list-group-pad-big">
+<!-- 							<li class="tm-list-group-item">
+                            <strong>Activos:</strong> 1.000
+                            </li>
+                            <li class="tm-list-group-item">
+                                <strong>Activos:</strong> 1.000
+                            </li>
+                            <li class="tm-list-group-item">
+                                <strong>Activos:</strong> 1.000
+                            </li>
+                            <li class="tm-list-group-item">
+                                <strong>Activos:</strong> 1.000
+                            </li>
+                            <li class="tm-list-group-item">
+                                <strong>Activos:</strong> 1.000
+                            </li>
+                            <li class="tm-list-group-item">
+                                <strong>Activos:</strong> 1.000
+                            </li>
+                            <li class="tm-list-group-item">
+                                <strong>Activos:</strong> 1.000
+                            </li>
+                            <li class="tm-list-group-item">
+                                <strong>Activos:</strong> 1.000
+                            </li> 
+							 {% for i in datos %}
+							<li> {{ i }} </li>
+							{% endfor %} -->
+							 {% for item in datos %}
+							<li><a class="tm-list-group-item">
+							<strong>{{ item[1]}}: </strong>{{ item[0] }}</a></li>
+                            {% endfor %}
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <!-- row -->
+            <div class="row tm-content-row tm-mt-big">
+                <div class="col-xl-8 col-lg-12 tm-md-12 tm-sm-12 tm-col">
+                    <div class="bg-white tm-block h-100">
+                        <h2 class="tm-block-title">Detalles técnicos</h2>
+								 <!-- <p><img src="img/b2.png" alt="Profile Image" width="700" height="350"><p> -->
+								<!-- <img src="img/b2.png" alt="Profile Image" class="img-fluid"> -->
+								<!-- <img src="img/b1.png" alt="Profile Image" class="img-fluid"> -->
+								<!-- <img src="img/b1.png" alt="Profile Image" class="img-fluid"> -->
+								<!-- <img src="img/b1.png" alt="Profile Image" class="img-fluid"> -->
+								<!-- <img src="img/b1.png" alt="Profile Image" class="img-fluid"> -->
+								 <!-- <p><img src="img/b1.png" alt="Profile Image" width="400" height="300"><p> -->
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-12 tm-md-12 tm-sm-12 tm-col">
+                    <div class="bg-white tm-block h-100">
+                        <div class="row">
+                            <div class="col-8">
+                                <h2 class="tm-block-title d-inline-block"> Métricas de precisión </h2>
+                            </div>
+                        </div>
+                        <ol class="tm-list-group tm-list-group-alternate-color tm-list-group-pad-big">
+                            <li class="tm-list-group-item">
+                                <strong>Activos:</strong> 1.000
+                            </li>
+                            <li class="tm-list-group-item">
+                                <strong>Activos:</strong> 1.000
+                            </li>
+                            <li class="tm-list-group-item">
+                                <strong>Activos:</strong> 1.000
+                            </li>
+                            <li class="tm-list-group-item">
+                                <strong>Activos:</strong> 1.000
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+           <footer class="row tm-mt-small">
+                <div class="col-12 font-weight-light">
+                    <p class="d-inline-block tm-bg-black text-white py-2 px-4">
+                        Fecha de actualización {{ fua }}. 
+                        <a rel="nofollow" href="https://www.datos.gov.co/Salud-y-Protecci-n-Social/Casos-positivos-de-COVID-19-en-Colombia/gt2j-8ykr" class="text-white tm-footer-link">Fuente: https://www.datos.gov.co/</a>
+                    </p>
+                </div>
+            </footer>
+    </div>
+</body>
+</html>
